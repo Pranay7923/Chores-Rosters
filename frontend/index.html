@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chore Roster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🏠 Chore Roster</h1>
+        <p>Smart and Fair Chore Management</p>
+    </header>
+
+    <main>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Flatmates</h3>
+                <p id="flatmateCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Chores</h3>
+                <p id="choreCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p id="completedCount">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Flatmate -->
+        <section class="box">
+
+            <h2>👥 Flatmates</h2>
+
+            <div class="input-row">
+
+                <input
+                    type="text"
+                    id="flatmateInput"
+                    placeholder="Enter flatmate name"
+                >
+
+                <button onclick="addFlatmate()">
+                    Add Flatmate
+                </button>
+
+            </div>
+
+            <ul id="flatmateList"></ul>
+
+        </section>
+
+
+        <!-- Add Chore -->
+        <section class="box">
+
+            <h2>🧹 Chores</h2>
+
+            <div class="input-row">
+
+                <input
+                    type="text"
+                    id="choreInput"
+                    placeholder="Enter chore"
+                >
+
+                <select id="difficultyInput">
+
+                    <option value="1">Difficulty 1</option>
+                    <option value="2">Difficulty 2</option>
+                    <option value="3">Difficulty 3</option>
+                    <option value="4">Difficulty 4</option>
+                    <option value="5">Difficulty 5</option>
+
+                </select>
+
+                <button onclick="addChore()">
+                    Add Chore
+                </button>
+
+            </div>
+
+            <ul id="choreList"></ul>
+
+        </section>
+
+
+        <!-- Assignment -->
+        <section class="box">
+
+            <h2>📋 This Week's Assignments</h2>
+
+            <button class="generate" onclick="generateAssignments()">
+                🔄 Generate Assignments
+            </button>
+
+            <div id="assignments"></div>
+
+        </section>
+
+
+        <!-- Next Week -->
+        <section class="box">
+
+            <h2>📅 Week Management</h2>
+
+            <p>
+                Current Week:
+                <strong id="weekNumber">1</strong>
+            </p>
+
+            <button class="next" onclick="nextWeek()">
+                ➡️ Move to Next Week
+            </button>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="box">
+
+            <h2>📊 Statistics</h2>
+
+            <div id="statistics"></div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
